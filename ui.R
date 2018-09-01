@@ -25,9 +25,10 @@ stock.list <- stock.info[,"StkNmL"]
 names(stock.list) <- stock.info[,"StkNmS"]
 
 
-area.list <- sort(unique(cu.info1[,"Area"]))
-watershed.list <- sort(unique(cu.info1[,"Watershed"]))
+area.list <- sort(unique(stock.info[,"Area"]))
+watershed.list <- sort(unique(stock.info[,"Watershed"]))
 
+var.list <- c("Total_Catch","Total_ER","Spawn_Escape","Total_Run") 
 
 
 ui <- navbarPage("Data Viewer Sample App",
@@ -45,11 +46,12 @@ pageWithSidebar(
   sidebarPanel(
 			tags$h4("Filter By Group"),
 				selectizeInput("area.pick", "Area", choices = area.list, multiple = TRUE ,selected=area.list),
-				selectizeInput("watershed.pick", "Watershed", choices = watershed.list, multiple = TRUE ,selected=area.list),
+				selectizeInput("watershed.pick", "Watershed", choices = watershed.list, multiple = TRUE ,selected=watershed.list),
 				helpText(span(textOutput("Num.Filtered.Stocks"), style="color:red")),
 			tags$hr(),
 			tags$h4("Select A Stock"),
 			  	selectizeInput("stock.pick", "Stock", choices = stock.list, multiple = FALSE ,selected=stock.list[1]),
+				selectizeInput("var.pick", "Variable", choices = var.list, multiple = FALSE ,selected=var.list[4])
 
 		) # end sidebar
   ,
@@ -57,7 +59,8 @@ pageWithSidebar(
 
      mainPanel(
 
-	   plotOutput("main_plot", width = "100%", height = "800px")	
+	   plotOutput("main_plot",click = "plot_click")	,
+	   verbatimTextOutput("info")
 	
 		) # end main panel
 
@@ -73,11 +76,11 @@ pageWithSidebar(
    
    
 #####################################
-	tabPanel("About / Disclaimer",
+	tabPanel("About",
 	
 	fluidPage(
 
-	titlePanel("About the SotS Tool"),
+	titlePanel("About this App"),
 
 	fluidRow(
      column(8,
@@ -85,7 +88,7 @@ pageWithSidebar(
     )
   )	
 )	
-	  ),  # end about tab panel
+	  )  # end about tab panel
 	  
 #####################################	
 	

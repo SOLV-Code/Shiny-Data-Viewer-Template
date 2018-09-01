@@ -1,7 +1,7 @@
-StkNmL,StkNmL,StkNmS,Area,Watershed
-Early Stuart,Stock 1,Stk1,North,Upper
-Stellako,Stock 2,Stk2,North,Upper
-Chilko,Stock 3,Stk3,North,Lower
-Fennel Creek,Stock 4,Stk4,South,Inner
-Gates,Stock 5,Stk5,South,Inner
-Upper Pitt River,Stock 6,Stk6,South,Outer
+StkNmL,StkNmS,Area,Watershed
+Stock 1,Stk1,North,Upper
+Stock 2,Stk2,North,Upper
+Stock 3,Stk3,North,Lower
+Stock 4,Stk4,South,Inner
+Stock 5,Stk5,South,Inner
+Stock 6,Stk6,South,Outer
