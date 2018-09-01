@@ -7,7 +7,7 @@ A sample app generated with this template is available [here](https://solv-code.
 ### Providing Feedback
 
 
-You can add suggestions on the (issues  page)[https://github.com/SOLV-Code/Shiny-Data-Viewer-Template/issues].
+You can add suggestions on the [issues  page](https://github.com/SOLV-Code/Shiny-Data-Viewer-Template/issues).
 
 ### How-To
 
@@ -22,7 +22,7 @@ To build your own viewer:
 
 #### shinyapps.io
 
-The easiest option is to get an account at [shinyapps.io](shinyapps.io).
+The easiest option is to get an account at [shinyapps.io](https://www.shinyapps.io/).
 With this approach, almost everything is taken care of for you, but the
 free account limits the total monthly use time for your apps, and does not
 offer login-controlled apps.
@@ -30,4 +30,5 @@ offer login-controlled apps.
 #### Virtual Server
 
 The more versatile option, with some extra effort at the start, is to set up your own virtual shiny server with a cloud provider. 
-Here is a [step-by-step guide](https://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/)
+Here is a [step-by-step guide](https://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/).
+
