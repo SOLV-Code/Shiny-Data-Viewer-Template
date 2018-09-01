@@ -41,18 +41,19 @@ ui <- navbarPage("Data Viewer Sample App",
   
     
 pageWithSidebar(
-  headerPanel("Time Series Plot"),
+ headerPanel("Time Series Plot"),
     
   sidebarPanel(
-			tags$h4("Filter By Group"),
+			tags$h4("Filter By Group ---------------------"),
 				selectizeInput("area.pick", "Area", choices = area.list, multiple = TRUE ,selected=area.list),
 				selectizeInput("watershed.pick", "Watershed", choices = watershed.list, multiple = TRUE ,selected=watershed.list),
 				helpText(span(textOutput("Num.Filtered.Stocks"), style="color:red")),
-			tags$hr(),
-			tags$h4("Select A Stock"),
+			tags$h4("Select A Stock ---------------------"),
 			  	selectizeInput("stock.pick", "Stock", choices = stock.list, multiple = FALSE ,selected=stock.list[1]),
-				selectizeInput("var.pick", "Variable", choices = var.list, multiple = FALSE ,selected=var.list[4])
-
+				selectizeInput("var.pick", "Variable", choices = var.list, multiple = FALSE ,selected=var.list[4]),
+			tags$h4("Plot Options ---------------------"),				
+				checkboxInput("rng.avg.show", "Show Running Average", value = TRUE),
+				sliderInput("rng.avg.yrs", "Time Window", value=4, min = 2, max = 12)
 		) # end sidebar
   ,
    

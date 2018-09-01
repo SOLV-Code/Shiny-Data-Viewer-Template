@@ -20,8 +20,8 @@ is_installed <- function(mypkg){ is.element(mypkg, installed.packages()[,1])  }
 load_or_install(c("rsconnect","shiny","shinydashboard","shinyjqui","shiny","shinydashboard","DT","ggplot2","shinyFiles"))
 
 
-# run the app
-rsconnect::deployApp(appTitle="SotS_T2")
+# deploy the app
+rsconnect::deployApp(appTitle="GenericDataViewer")
 
 rsconnect::showLogs()
 
