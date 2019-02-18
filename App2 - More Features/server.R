@@ -122,7 +122,9 @@ function(input, output, session) {
 		
 
 		
-		x.lim <- yrs.all.range
+		x.lim <- input$plot.yrs
+		
+		
 		if(!is.finite(y.lim[2])){y.lim[2] <- 1}		
 		plot(series.plot[,"Year"],series.plot[,input$var.pick],main=paste(stock.name,input$var.pick,sep=" - "),
 				xlab="Year",xlim=x.lim,ylab = input$var.pick,ylim=y.lim, 	

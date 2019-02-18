@@ -1,15 +1,15 @@
 # PART 1: LAUNCHING THE APP LOCALLY
 
 # Load the function that does the model set-up and launches the GUI
-source("App1 - Basic/R/1_LaunchApp1.R")
+source("App2 - More Features/R/1_LaunchApp2.R")
 
 # Run the function to launch GUI locally
-launchApp1(appDir.use="App1 - Basic",fun.path="App1 - Basic/R",local=TRUE)
+launchApp2(appDir.use="App2 - More Features",fun.path="App2 - More Features/R",local=TRUE)
 
 
 # Run the function to just go to the server version 
 # THIS DOES NOT USE THE LATEST LOCAL VERSION!
-launchApp1(local=FALSE)
+launchApp2(local=FALSE)
 
 
 
@@ -22,7 +22,7 @@ launchApp1(local=FALSE)
 require("rsconnect")
 
 # deploy the app
-rsconnect::deployApp(appDir="App1 - Basic", appTitle="GenericDataViewer1")
+rsconnect::deployApp(appDir="App2 - More Features", appTitle="GenericDataViewer2")
 
 rsconnect::showLogs()
 
