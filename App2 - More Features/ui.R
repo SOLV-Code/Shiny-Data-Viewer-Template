@@ -1,21 +1,5 @@
 
 
-
-# load packages 
-# install check already done in RunLocally.R 
-# all required CRAN packages are included as part of deployment to shinyapps.io
-library(rsconnect)
-library(shiny)
-library(shinydashboard)
-library(shinyjqui)
-library(shiny)
-library(shinydashboard)
-library(DT)
-library(ggplot2)
-library(shinyFiles)
-library(markdown)
-
-
 # read in the data and get some details for populating the GUI
 data.file <- read.csv("DATA/Stock_TimeSeries.csv",stringsAsFactors=FALSE)
 stock.info <- read.csv("DATA/Stock_Info.csv",stringsAsFactors=FALSE)
@@ -48,12 +32,13 @@ pageWithSidebar(
 				selectizeInput("area.pick", "Area", choices = area.list, multiple = TRUE ,selected=area.list),
 				selectizeInput("watershed.pick", "Watershed", choices = watershed.list, multiple = TRUE ,selected=watershed.list),
 				helpText(span(textOutput("Num.Filtered.Stocks"), style="color:red")),
-			tags$h4("Select A Stock ---------------------"),
+			tags$h4("Select A Stock & Variable --------------"),
 			  	selectizeInput("stock.pick", "Stock", choices = stock.list, multiple = FALSE ,selected=stock.list[1]),
 				selectizeInput("var.pick", "Variable", choices = var.list, multiple = FALSE ,selected=var.list[4]),
-			tags$h4("Plot Options ---------------------"),				
+			tags$h4("Plot Options ---------------------"),		
+				sliderInput("plot.yrs", "Plot Time Window", value=c(1970,2020), sep="", min = 1951, max = 2020),			
 				checkboxInput("rng.avg.show", "Show Running Average", value = TRUE),
-				sliderInput("rng.avg.yrs", "Time Window", value=4, min = 2, max = 12)
+				sliderInput("rng.avg.yrs", "Avg Yrs", value=4, min = 2, max = 12)
 		) # end sidebar
   ,
    

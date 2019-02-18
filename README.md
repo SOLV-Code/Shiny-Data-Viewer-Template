@@ -1,7 +1,9 @@
 ## Shiny-Data-Viewer-Template
-This repository contains a basic shiny app template for reviewing data sets, as well as a script for deploying the app to [shinyapps.io](shinyapps.io)
+This repository contains templates for shiny apps, as well as scripts for launching the apps locally
+or deploying the apps to [shinyapps.io](shinyapps.io).
 
-A sample app generated with this template is available [**HERE**](https://solv-code.shinyapps.io/GenericDataViewer/)
+* **App 1: Basic Data Viewer**: A very basic sample app generated with this template is available [**HERE**](https://solv-code.shinyapps.io/genericdataviewer1/)
+* **App 2: Bit More Fancy Data Viewer**: A sample app with a few more bells and whistles is available [**HERE**](https://solv-code.shinyapps.io/genericdataviewer2/)
 
 
 ### Providing Feedback

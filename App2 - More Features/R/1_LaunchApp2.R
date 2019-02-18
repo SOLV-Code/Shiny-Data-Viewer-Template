@@ -5,9 +5,9 @@
 # NOTE: this includes sourcing  library_calls.R, which ensures that all the
 # required packages are loaded when the app is compiled/
 
-launchApp1 <- function(appDir.use=NULL,fun.path=NULL,local=TRUE){
+launchApp2 <- function(appDir.use=NULL,fun.path=NULL,local=TRUE){
 
-if(!local){browseURL("https://solv-code.shinyapps.io/genericdataviewer1/")}
+if(!local){browseURL("https://solv-code.shinyapps.io/genericdataviewer2/")}
 
 if(local){
 
